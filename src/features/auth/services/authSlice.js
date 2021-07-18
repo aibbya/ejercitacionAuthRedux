@@ -23,12 +23,12 @@ export const authSlice = createSlice({
         },
         logError: (state, action) => {
             state.error = action.payload.message;
-			state.state = "error";
-			state.loading = false;
+            state.state = "error";
+            state.loading = false;
             state.token = '';
-			localStorage.removeItem("token")
-        } 
-        
+            localStorage.removeItem("token")
+        }
+
     },
 })
 

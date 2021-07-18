@@ -1,10 +1,8 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import { Pages } from './config/Pages';
-import { RoutePrivate } from './config/Route';
+import { RoutePrivate } from './config/RoutePrivate';
 import userIsLogged from './utils/userIsLogged';
 import Login from './pages/Login';
 import Home from './pages/Home';

@@ -4,20 +4,18 @@ import userIsLogged from '../utils/userIsLogged';
 
 
 export const RoutePrivate = route => {
- 
-  return(
+
+  return (
     <RouteReact
       path={route.path}
       exact={route.exact}
-      render= { (props) => (
-        ( userIsLogged() )
-            ? ( <route.component  { ...props } /> )
-            : ( 
-            <Redirect to="/login" /> 
-            )
-    )}
+      render={(props) => (
+        (userIsLogged())
+          ? (<route.component  {...props} />)
+          : (
+            <Redirect to="/login" />
+          )
+      )}
     />
-
-   
   )
 }

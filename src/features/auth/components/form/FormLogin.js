@@ -64,7 +64,7 @@ const FormLogin = () => {
         alignItems="center"
       >
         <Avatar bg="teal.500" />
-        <Heading color="teal.400">Welcome</Heading>
+        <Heading color="teal.400">BIENVENIDO</Heading>
         <Box minW={{ base: "90%", md: "468px" }}>
           <form onSubmit={formik.handleSubmit}>
             <Stack
@@ -88,7 +88,7 @@ const FormLogin = () => {
                     onBlur={formik.handleBlur} />
                 </InputGroup>
                 {formik.touched.email && formik.errors.email ? (
-                  <Alert justifyContent="center" status="error">
+                  <Alert borderRadius="lg" justifyContent="center" status="error">
                     <AlertIcon />
                     {formik.errors.email}
                   </Alert>
@@ -109,7 +109,6 @@ const FormLogin = () => {
                     value={formik.values.password}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur} />
-                                    />
                   <InputRightElement width="4.5rem">
                     <Button h="1.75rem" size="sm" onClick={handleShowClick}>
                       {showPassword ? "Hide" : "Show"}
@@ -117,7 +116,7 @@ const FormLogin = () => {
                   </InputRightElement>
                 </InputGroup>
                 {formik.touched.password && formik.errors.password ? (
-                  <Alert justifyContent="center" status="error">
+                  <Alert justifyContent="center" borderRadius="lg" status="error" >
                     <AlertIcon />
                     {formik.errors.password}
                   </Alert>
