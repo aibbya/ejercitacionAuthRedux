@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route as RouteReact, Redirect } from 'react-router-dom'
 import userIsLogged from '../features/auth/userIsLogged';
 
 
-export const Route = route => {
+export const RoutePrivate = route => {
  
-  useEffect( ()=> {
-    userIsLogged()
-  }, []);
-
   return(
     <RouteReact
       path={route.path}
@@ -16,7 +12,9 @@ export const Route = route => {
       render= { (props) => (
         ( userIsLogged() )
             ? ( <route.component  { ...props } /> )
-            : ( <Redirect to="/login" /> )
+            : ( 
+            <Redirect to="/login" /> 
+            )
     )}
     />
 
