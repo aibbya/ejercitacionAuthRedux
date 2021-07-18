@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route as RouteReact, Redirect } from 'react-router-dom'
-import userIsLogged from '../features/auth/userIsLogged';
+import userIsLogged from '../utils/userIsLogged';
 
 
 export const RoutePrivate = route => {

@@ -1,6 +1,5 @@
 
 import Home from '../pages/Home';
-import Login from './../pages/Login';
 
 
 class Page {
@@ -13,7 +12,6 @@ class Page {
 }
 
 export const Pages = [
-	// new Page(Login, "/login"),
 	new Page(Home, "/home")
 
 ];
