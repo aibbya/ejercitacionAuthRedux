@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import userIsLogged from '../features/auth/userIsLogged';
+import userIsLogged from '../utils/userIsLogged';
 
 const Home = () => {
     const [modo, setModo] = useState(false)
